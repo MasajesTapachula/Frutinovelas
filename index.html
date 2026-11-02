@@ -59,7 +59,7 @@ const data=[
 {id:9,title:"Fresa Terror en la Licuadora",cat:"Terror",type:"suelto",season:null,thumb:"🍓",free:false,views:"7k"},
 {id:10,title:"Durazno y Durazno Romance",cat:"Romance",type:"suelto",season:null,thumb:"🍑",free:true,views:"14k"},
 ];
-const cats=["Todas","Romance","Drama","Venganza","Amor prohibido","Comedia","Infieles","Secretos","Parodia","Terror","Ricos vs pobres","Embarazos","Narco-frutas","Suelta","Temporada","Gratis","Premium $200"];
+const cats=["Todas","Romance","Drama","Venganza","Amor prohibido","Comedia","Infieles","Secretos","Parodia","Terror","Temporada","Ricos vs pobres","Embarazos","Narco-frutas","Suelta","Gratis","Premium $200"];
 let activeCat="Todas";
 function renderCats(){const b=document.getElementById('catBubbles');b.innerHTML=cats.map(c=>`<button onclick="setCat('${c}')" class="whitespace-nowrap px-3 md:px-4 py-2 rounded-full text-[11px] md:text-xs font-bold border ${activeCat===c?'bg-white text-black border-white':'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700'}">${c}</button>`).join('');const p=document.getElementById('catPanel');if(p)p.innerHTML=cats.map(c=>`<button onclick="setCat('${c}')" class="w-full text-left px-3 py-2 rounded-lg text-sm ${activeCat===c?'bg-white text-black font-bold':'text-zinc-400 hover:bg-zinc-800'}">${c}</button>`).join('');}
 function setCat(c){activeCat=c;renderCats();renderGrid();}
